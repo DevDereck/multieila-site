@@ -1,0 +1,13 @@
+{
+  "name": "multieila-site",
+  "version": "1.0.0",
+  "description": "Sitio web para Multieila con cotizador y envío de correos (serverless).",
+  "main": "index.js",
+  "scripts": {
+    "start": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.4"
+  }
+}
