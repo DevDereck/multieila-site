@@ -9,8 +9,8 @@
   <!-- Google Fonts: Inter + Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/styles.css" />
-  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="public/css/styles.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <script src="public/js/script.js" defer></script>
 </head>
 <body>
@@ -29,7 +29,7 @@
         <ul>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#cotizar">Cotizar</a></li>
-          <li><a href="#acerca">Acerca</a></li>
+          <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
           <li><a href="#contacto" class="btn-outline">Contacto</a></li>
         </ul>
       </nav>
@@ -41,7 +41,7 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <h1 class="reveal">Expertos en Electromecánica Industrial</h1>
+          <h1 class="main-title reveal">Expertos en Electromecánica Industrial</h1>
           <p class="lead reveal delay-1">
             Diseño, mantenimiento y montaje para la industria. Calidad, seguridad y tiempos de respuesta óptimos.
           </p>
@@ -57,7 +57,7 @@
     <!-- SERVICIOS -->
     <section id="servicios" class="section section-alt">
       <div class="container">
-        <h2 class="section-title reveal">Nuestros servicios</h2>
+        <h2 class="main-section-title reveal">Nuestros servicios</h2>
         <p class="section-sub reveal delay-1">Prestamos servicios integrales en electromecánica industrial:</p>
 
         <div class="services-grid">
@@ -91,11 +91,11 @@
     <!-- COTIZAR -->
     <section id="cotizar" class="section">
       <div class="container">
-        <h2 class="section-title reveal">Cotiza tus servicios</h2>
+        <h2 class="main-section-title reveal">Cotiza tus servicios</h2>
         <p class="section-sub reveal delay-1">Selecciona los servicios, ajusta cantidad y opciones para obtener una estimación instantánea.</p>
 
         <div class="quote-grid">
-          <form id="quoteForm" class="quote-form reveal delay-2" aria-label="Formulario de cotización" novalidate>
+          <form id="quoteForm" class="main-form quote-form reveal delay-2" aria-label="Formulario de cotización" novalidate>
             <fieldset>
               <legend>Servicios (selecciona al menos uno)</legend>
               <label class="checkbox">
@@ -171,31 +171,34 @@
       </div>
     </section>
 
-    <!-- ACERCA -->
-    <section id="acerca" class="section section-alt">
+    <!-- SOBRE NOSOTROS -->
+    <section id="sobre-nosotros" class="section section-alt" style="background: linear-gradient(120deg, #f6fbff 70%, #eef5ff 100%);">
       <div class="container">
-        <h2 class="section-title reveal">Acerca de Multieila</h2>
-        <div class="about-grid">
-          <div class="about-text reveal delay-1">
-            <p>Empresa especializada en servicios electromecánicos industriales con más de una década de experiencia apoyando procesos productivos en múltiples sectores.</p>
-            <ul>
-              <li>Equipos y tableros eléctricos</li>
-              <li>Automatización PLC</li>
-              <li>Soporte 24/7</li>
+        <div class="about-flex">
+          <div class="about-info">
+            <h1 class="about-title reveal">Sobre nosotros</h1>
+            <p class="about-desc">En <strong>Multiservicios EILA</strong> ofrecemos soluciones integrales en electromecánica industrial, combinando experiencia, innovación y compromiso con la calidad. Nuestro equipo multidisciplinario acompaña a empresas líderes en la transformación y automatización de sus procesos productivos.</p>
+            <ul class="about-list">
+              <li>Diseño, montaje y mantenimiento de sistemas eléctricos industriales</li>
+              <li>Automatización avanzada: PLC, HMI, SCADA</li>
+              <li>Consultoría técnica y soporte especializado</li>
+              <li>Proyectos llave en mano adaptados a cada cliente</li>
             </ul>
           </div>
-          <div class="about-stats reveal delay-2">
-            <div class="stat">
-              <strong>+200</strong>
-              <span>Proyectos</span>
+          <div style="flex: 1 1 520px; min-width: 340px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+            <div class="about-imgbox">
+              <img src="assets/pcl.jpg" alt="Automatización PLC" class="about-img" />
             </div>
-            <div class="stat">
-              <strong>+10</strong>
-              <span>Años</span>
-            </div>
-            <div class="stat">
-              <strong>24/7</strong>
-              <span>Soporte</span>
+            <div class="testimonials">
+              <h2 class="testimonials-title">Testimonios de clientes</h2>
+              <div class="testimonial blue">
+                <p class="testimonial-text">“Por años EILA ha demostrado que son los mejores del mercado”.</p>
+                <span class="testimonial-author" style="color:#1672d4;">Cinthia Calvo, Hotel Grano de Oro</span>
+              </div>
+              <div class="testimonial orange">
+                <p class="testimonial-text">“Son más que un proveedor; son un socio comercial, siempre brindando un excelente servicio”.</p>
+                <span class="testimonial-author" style="color:#ff7a00;">Adriana Cordero, Lavandería Lavasplash</span>
+              </div>
             </div>
           </div>
         </div>
@@ -205,10 +208,10 @@
     <!-- CONTACTO -->
     <section id="contacto" class="section">
       <div class="container contact">
-        <h2 class="section-title reveal">Contacto</h2>
+        <h2 class="main-section-title reveal">Contacto</h2>
         <p class="reveal delay-1">¿Listo para trabajar con nosotros? Escríbenos.</p>
         <div class="contact-grid reveal delay-2">
-          <form id="contactForm" class="contact-form" novalidate>
+          <form id="contactForm" class="main-form contact-form" novalidate>
             <label>Nombre <input type="text" name="name" required /></label>
             <label>Correo <input type="email" name="email" required /></label>
             <label>Teléfono <input type="tel" name="phone" pattern="^[0-9()+-\s]{6,20}$" /></label>
