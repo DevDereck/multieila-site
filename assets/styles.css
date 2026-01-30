@@ -68,9 +68,16 @@ body{
 .site-nav a:hover{background:rgba(255,255,255,0.04)}
 
 /* Buttons */
-.btn-primary{
-  background: linear-gradient(90deg,var(--orange-500),var(--orange-600));
-  color:#fff;padding:10px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:600;box-shadow:0 6px 18px rgba(255,122,0,0.12);
+.btn-primary {
+  background: linear-gradient(90deg, var(--orange-500), var(--orange-600));
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(255,122,0,0.12);
+  text-decoration: none;
 }
 .btn-secondary{background:transparent;border:1px solid rgba(255,255,255,0.12);color:#fff;padding:8px 14px;border-radius:10px;text-decoration:none}
 .btn-outline{background:transparent;border:1px solid rgba(11,61,145,0.12);padding:8px 12px;border-radius:8px;color:var(--blue-900)}
@@ -79,14 +86,74 @@ body{
 .form-error{color:#b00020;background:#fff1f2;padding:10px;border-radius:8px;margin-top:10px;border:1px solid #f7d4d8}
 .form-success{color:#064e3b;background:#ecfdf5;padding:10px;border-radius:8px;margin-top:10px;border:1px solid #bbf7d0}
 
+
 /* Hero */
-.hero{padding:56px 0;background:linear-gradient(180deg, rgba(1,46,93,0.02), transparent);} 
-.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
-.hero-copy h1{font-size:clamp(1.6rem,4vw,2.6rem);margin:0 0 14px}
-.lead{color:var(--muted);margin:0 0 18px}
-.hero-card{background:linear-gradient(180deg,#fff, #f3f7ff);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;position:relative}
-.hero-card .cover{width:100%;height:320px;object-fit:cover;display:block}
-.hero-card .badge{position:absolute;left:12px;bottom:12px;background:linear-gradient(90deg,var(--blue-700),var(--orange-500));color:#fff;padding:6px 10px;border-radius:8px;font-weight:700}
+.hero {
+  padding: 56px 0;
+  background:
+    linear-gradient(180deg, rgba(1, 26, 54, 0.18), rgba(1, 25, 52, 0.02) 80%, transparent),
+    url('../assets/hero.png') center center/cover no-repeat;
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(2, 17, 37, 0.45) 100%, rgba(2, 16, 33, 0.1) 0%, transparent 100%);
+  z-index: 1;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 28px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-copy h1 {
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  margin: 0 0 14px;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(7,33,68,0.18);
+}
+
+.lead {
+  color: #fff;
+  margin: 0 0 18px;
+  text-shadow: 0 2px 8px rgba(7,33,68,0.12);
+}
+
+.hero-card {
+  background: linear-gradient(180deg, #fff, #f3f7ff);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-card .cover {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-card .badge {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  background: linear-gradient(90deg, var(--blue-700), var(--orange-500));
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+}
 
 /* Sections */
 .section{padding:56px 0}
