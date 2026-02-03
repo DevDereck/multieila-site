@@ -30,7 +30,7 @@
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#cotizar">Cotizar</a></li>
           <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
-          <li><a href="#contacto" class="btn-outline">Contacto</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -177,27 +177,42 @@
         <div class="about-flex">
           <div class="about-info">
             <h1 class="about-title reveal">Sobre nosotros</h1>
-            <p class="about-desc">En <strong>Multiservicios EILA</strong> ofrecemos soluciones integrales en electromecánica industrial, combinando experiencia, innovación y compromiso con la calidad. Nuestro equipo multidisciplinario acompaña a empresas líderes en la transformación y automatización de sus procesos productivos.</p>
+            <p class="about-desc"> <strong>Multiservicios EILA</strong> es una empresa costarricense especializada en el área electromecánica. Desde nuestros inicios en 1995, nos caracterizamos por brindar a nuestros clientes productos y soluciones de alta calidad. <br>
+              Nuestra gama de servicios se engloban en el mantenimiento e instalación de áreas de lavado industrial, cuartos de máquinas y plantas comerciales. Todo ello visto con los principios cristianos y la integridad que forma parte de nuestros valores</p>
             <ul class="about-list">
               <li>Diseño, montaje y mantenimiento de sistemas eléctricos industriales</li>
               <li>Automatización avanzada: PLC, HMI, SCADA</li>
               <li>Consultoría técnica y soporte especializado</li>
               <li>Proyectos llave en mano adaptados a cada cliente</li>
             </ul>
+              <div class="about-extra reveal delay-2" style="margin-top:2.5rem;">
+                <h2 style="font-family: 'Montserrat', sans-serif; font-size:2.2rem; font-weight:700; margin-bottom:0.5rem; color:#072144;">Nuestra Filosofía</h2>
+                <p style="font-family: 'Inter', sans-serif; font-size:1.18rem; color:#222e3a; margin-bottom:1.8rem; max-width:600px;">Somos una empresa líder a nivel nacional en servicios electromecánicos, atendiendo las necesidades de nuestros clientes, siempre contando con un recurso humano altamente capacitado y motivado para contribuir con la capacidad y eficiencia productiva de cada una de las empresas a las que les prestamos nuestros servicios.</p>
+                <h2 style="font-family: 'Montserrat', sans-serif; font-size:2.2rem; font-weight:700; margin-bottom:0.5rem; color:#072144;">Nuestros Valores</h2>
+                <p style="font-family: 'Inter', sans-serif; font-size:1.18rem; color:#222e3a; margin-bottom:2.2rem; max-width:600px;">Durante toda nuestra vida profesional, hemos mantenido nuestros valores cristianos como norte a seguir. La integridad, responsabilidad, honestidad, excelencia, compromiso y respeto guían nuestros pasos cada día.</p>
+              </div>
           </div>
           <div style="flex: 1 1 520px; min-width: 340px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
             <div class="about-imgbox">
               <img src="assets/pcl.jpg" alt="Automatización PLC" class="about-img" />
             </div>
-            <div class="testimonials">
-              <h2 class="testimonials-title">Testimonios de clientes</h2>
-              <div class="testimonial blue">
-                <p class="testimonial-text">“Por años EILA ha demostrado que son los mejores del mercado”.</p>
-                <span class="testimonial-author" style="color:#1672d4;">Cinthia Calvo, Hotel Grano de Oro</span>
+            <div style="display: flex; flex-direction: column; gap: 2.2rem; width: 100%; align-items: stretch;">
+              <div class="testimonials">
+                <h2 class="testimonials-title">Testimonios de clientes</h2>
+                <div class="testimonial blue">
+                  <p class="testimonial-text">“Por años EILA ha demostrado que son los mejores del mercado”.</p>
+                  <span class="testimonial-author" style="color:#1672d4;">Cinthia Calvo, Hotel Grano de Oro</span>
+                </div>
+                <div class="testimonial orange">
+                  <p class="testimonial-text">“Son más que un proveedor; son un socio comercial, siempre brindando un excelente servicio”.</p>
+                  <span class="testimonial-author" style="color:#ff7a00;">Adriana Cordero, Lavandería Lavasplash</span>
+                </div>
               </div>
-              <div class="testimonial orange">
-                <p class="testimonial-text">“Son más que un proveedor; son un socio comercial, siempre brindando un excelente servicio”.</p>
-                <span class="testimonial-author" style="color:#ff7a00;">Adriana Cordero, Lavandería Lavasplash</span>
+              <div class="about-quote-box reveal delay-3" style="background: #eef5ff; border-radius: 12px; box-shadow: 0 2px 12px #1672d41a; padding: 2.2rem 1.5rem; display: flex; flex-direction: column; align-items: flex-end; justify-content: center;">
+                <blockquote style="font-family: 'Montserrat', sans-serif; font-size:2.2rem; font-weight:600; color:#1672d4; margin:0 0 0.7rem 0; border:none; background:none; text-align:right; max-width: 420px;">
+                  “Nosotros no somos de los que retrocedemos”
+                </blockquote>
+                <span style="font-family: 'Inter', sans-serif; font-size:1.1rem; color:#1672d4; font-weight:500; margin-top:0.2rem; text-align:right; display:block;">Hebreos 10:39</span>
               </div>
             </div>
           </div>
@@ -206,27 +221,49 @@
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="section">
+    <section id="contacto" class="section contact-section">
       <div class="container contact">
-        <h2 class="main-section-title reveal">Contacto</h2>
-        <p class="reveal delay-1">¿Listo para trabajar con nosotros? Escríbenos.</p>
-        <div class="contact-grid reveal delay-2">
-          <form id="contactForm" class="main-form contact-form" novalidate>
-            <label>Nombre <input type="text" name="name" required /></label>
-            <label>Correo <input type="email" name="email" required /></label>
-            <label>Teléfono <input type="tel" name="phone" pattern="^[0-9()+-\s]{6,20}$" /></label>
-            <label>Mensaje <textarea name="message" rows="4" required></textarea></label>
-            <div>
-              <button class="btn-primary" type="submit">Enviar mensaje</button>
+        <div class="contact-flex" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: stretch; justify-content: center;">
+          <div class="contact-info-card reveal delay-1">
+            <h2 class="main-section-title contact-title">Contacto</h2>
+            <p class="contact-desc">¿Listo para trabajar con nosotros? Escríbenos o llámanos, ¡te responderemos pronto!</p>
+            <div style="display:flex; flex-direction:column; gap:16px; margin-top:18px;">
+              <div class="contact-info-list">
+                <div class="contact-info-item email">
+                  <span class="contact-icon blue">
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path fill="#fff" d="M4 4h16v2H4V4zm2 4h12v12H6V8z"/></svg>
+                  </span>
+                  <span class="contact-info-text">info@multieila.com</span>
+                </div>
+                <div class="contact-info-item phone">
+                  <span class="contact-icon orange">
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path fill="#fff" d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C7.61 21 3 16.39 3 11a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.21 1.11l-2.2 2.2z"/></svg>
+                  </span>
+                  <span class="contact-info-text">+1 234 567 890</span>
+                </div>
+                <div class="contact-info-item address">
+                  <span class="contact-icon blue">
+                    <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path fill="#fff" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"/></svg>
+                  </span>
+                  <span class="contact-info-text">Calle Ejemplo 123, Ciudad</span>
+                </div>
+              </div>
             </div>
+          </div>
+          <form id="contactForm" class="main-form contact-form reveal delay-2" novalidate style="flex:1 1 420px; min-width:320px; max-width:480px; background:#fff; border-radius:20px; box-shadow:0 8px 32px rgba(9,30,66,0.13); padding:38px 32px; display:flex; flex-direction:column; gap:18px; justify-content:center;">
+            <div class="contact-form-grid">
+              <label class="contact-label">Nombre <input type="text" name="name" required placeholder="Escribe tu nombre completo" /></label>
+              <label class="contact-label">Correo <input type="email" name="email" required placeholder="ejemplo@correo.com" /></label>
+              <label class="contact-label">Teléfono <input type="tel" name="phone" required pattern="^[0-9()+-\s]{6,20}$" placeholder="Número de contacto" /></label>
+              <label class="contact-label contact-label-message">Mensaje <textarea name="message" rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea></label>
+              <div class="form-actions contact-form-actions">
+                <button class="btn-contact-send" type="submit">Enviar</button>
+              </div>
+            </div>
+            <!-- El botón ahora está dentro del grid -->
             <div id="contactError" class="form-error" role="alert" aria-live="assertive" hidden></div>
             <div id="contactSuccess" class="form-success" role="status" aria-live="polite" hidden></div>
           </form>
-          <div class="contact-info">
-            <p><strong>Email:</strong> info@multieila.com</p>
-            <p><strong>Teléfono:</strong> +1 234 567 890</p>
-            <p><strong>Dirección:</strong> Calle Ejemplo 123, Ciudad</p>
-          </div>
         </div>
       </div>
     </section>
