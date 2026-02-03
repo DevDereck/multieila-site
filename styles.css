@@ -191,7 +191,7 @@ body {
   padding: 56px 0;
   background:
     linear-gradient(180deg, rgba(1, 26, 54, 0.18), rgba(1, 25, 52, 0.02) 80%, transparent),
-    url('/assets/hero.png') center center/cover no-repeat;
+    url('/hero.png') center center/cover no-repeat;
   position: relative;
   min-height: 480px;
   display: flex;
