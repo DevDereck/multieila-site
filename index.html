@@ -9,7 +9,7 @@
   <!-- Google Fonts: Inter + Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/styles.min.css" />
+  <link rel="stylesheet" href="/styles.css" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <script src="/script.js" defer></script>
 </head>
@@ -55,36 +55,91 @@
     </section>
 
     <!-- SERVICIOS -->
-    <section id="servicios" class="section section-alt">
+    <section id="servicios" class="section section-alt services-section">
       <div class="container">
-        <h2 class="main-section-title reveal">Nuestros servicios</h2>
-        <p class="section-sub reveal delay-1">Prestamos servicios integrales en electromecánica industrial:</p>
+        <div class="services-header">
+          <div class="services-title-group">
+            <span class="services-eyebrow reveal">Servicios</span>
+            <h2 class="main-section-title reveal">Nuestros servicios industriales</h2>
+            <p class="section-sub reveal delay-1">Soluciones integrales con enfoque en seguridad, eficiencia y continuidad operativa.</p>
+          </div>
+          <div class="services-cta reveal delay-2">
+            <p>Equipo técnico certificado, respuesta ágil y acompañamiento en cada etapa del proyecto.</p>
+            <a href="#cotizar" class="btn-primary">Cotiza en minutos</a>
+          </div>
+        </div>
 
-        <div class="services-grid">
-          <article class="service-card reveal delay-2" data-service="Montaje">
-            <div class="icon"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2L15 8l6 .5-4.5 3L19 20 12 16.5 5 20l1.5-8.5L2 8.5 8 8 12 2z"/></svg></div>
-            <h3>Montaje industrial</h3>
-            <p>Montaje de equipos, líneas eléctricas y tableros. Cumplimos normas de seguridad industrial.</p>
+        <div class="services-showcase">
+          <article class="service-feature reveal delay-1">
+            <div class="service-media">
+              <img src="/lavanderias.jpg" alt="Mantenimiento de lavanderías industriales" loading="lazy" decoding="async" />
+              <span class="service-chip">Lavanderías industriales</span>
+            </div>
+            <div class="service-body">
+              <h3>Lavanderías Industriales</h3>
+              <p>Mantenimiento preventivo y correctivo para lavadoras, secadoras y aplanchadores industriales con repuestos certificados.</p>
+              <ul class="service-points">
+                <li>Diagnóstico predictivo</li>
+                <li>Optimización energética</li>
+                <li>Planes de continuidad</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="service-card reveal delay-3" data-service="Mantenimiento">
-            <div class="icon"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zM11 6h2v6h-2V6zm0 8h2v2h-2v-2z"/></svg></div>
-            <h3>Mantenimiento preventivo y correctivo</h3>
-            <p>Planes a medida y reparaciones con repuestos certificados para minimizar paros.</p>
+          <article class="service-feature reveal delay-2">
+            <div class="service-media">
+              <img src="/caldera.jpeg" alt="Servicio técnico para calderas industriales" loading="lazy" decoding="async" />
+              <span class="service-chip">Calderas</span>
+            </div>
+            <div class="service-body">
+              <h3>Calderas</h3>
+              <p>Instalación completa, reparación de quemadores y calibraciones de combustión para máxima eficiencia y seguridad.</p>
+              <ul class="service-points">
+                <li>Refractarios y tubos</li>
+                <li>Programadores Honeywell</li>
+                <li>Conversión a gas</li>
+              </ul>
+            </div>
           </article>
 
-          <article class="service-card reveal delay-4" data-service="Diseño">
-            <div class="icon"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M3 3h18v2H3V3zm2 4h14v12H5V7z"/></svg></div>
-            <h3>Diseño y automatización</h3>
-            <p>Diseño de tableros, automatización PLC y optimización de procesos industriales.</p>
-          </article>
-
-          <article class="service-card reveal delay-5" data-service="Emergencia">
-            <div class="icon"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M11 2v20h2V2h-2zM4 11h16v2H4v-2z"/></svg></div>
-            <h3>Respuesta a fallas (24/7)</h3>
-            <p>Equipo de guardia para atenciones urgentes, diagnóstico y restauración rápida.</p>
+          <article class="service-feature reveal delay-3">
+            <div class="service-media">
+              <img src="/tuberias.jpg" alt="Fabricación e instalación de tuberías industriales" loading="lazy" decoding="async" />
+              <span class="service-chip">Tuberías</span>
+            </div>
+            <div class="service-body">
+              <h3>Tuberías industriales</h3>
+              <p>Fabricación, montaje y traslado de sistemas hidráulicos, vapor, aire y líneas alimentarias en acero y cobre.</p>
+              <ul class="service-points">
+                <li>Acero inoxidable 304/316</li>
+                <li>Hierro negro cédula 40/80</li>
+                <li>Sistemas de bombeo</li>
+              </ul>
+            </div>
           </article>
         </div>
+
+        <div class="services-highlight reveal delay-4">
+          <div>
+            <h3>Automatización de procesos</h3>
+            <p>Integramos PLC, tableros y sensores para automatizar equipos con un equipo multidisciplinario especializado.</p>
+          </div>
+          <a href="#contacto" class="btn-secondary">Hablar con un asesor</a>
+        </div>
+          <div class="services-highlight reveal delay-5">
+            <div>
+              <h3>Mantenimiento de cocinas industriales</h3>
+              <p>Cocinas industriales especializadas para hoteles y restaurantes. Además, reparamos y reconstruimos todo tipo de cocinas que el cliente requiera.</p>
+            </div>
+            <a href="#contacto" class="btn-secondary">Hablar con un asesor</a>
+          </div>
+          <div class="services-highlight reveal delay-6">
+            <div>
+              <h3>Capacitaciones</h3>
+              <p>Nuestro personal altamente capacitado ofrece capacitaciones para todo equipo y sistemas que instalemos, reparemos o reconstruyamos.</p>
+            </div>
+            <a href="#contacto" class="btn-secondary">Hablar con un asesor</a>
+          </div>
       </div>
     </section>
 

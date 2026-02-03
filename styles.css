@@ -267,6 +267,187 @@ body {
 .service-card .icon { width: 56px; height: 56px; border-radius: 10px; background: linear-gradient(180deg, var(--blue-700), var(--blue-500)); color: #fff; display: flex; align-items: center; justify-content: center; margin-bottom: 8px }
 .service-card h3 { margin: 0 0 8px }
 
+/* Services redesign */
+.services-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.services-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.services-title-group {
+  max-width: 620px;
+}
+
+.services-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange-600);
+  margin-bottom: 10px;
+}
+
+.services-eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: var(--orange-600);
+  border-radius: 999px;
+}
+
+.services-cta {
+  background: #fff;
+  border: 1px solid #e6eef8;
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 12px 28px rgba(9,30,66,0.08);
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.services-cta p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.services-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.service-feature {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(9,30,66,0.1);
+  border: 1px solid #e6eef8;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-feature:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 38px rgba(9,30,66,0.16);
+}
+
+.service-media {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.service-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+
+.service-feature:hover .service-media img {
+  transform: scale(1.04);
+}
+
+.service-chip {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  background: rgba(7,33,68,0.88);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.service-body {
+  padding: 18px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-body h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #072144;
+}
+
+.service-body p {
+  margin: 0;
+  color: #42566f;
+  font-size: 0.98rem;
+}
+
+.service-points {
+  margin: 0;
+  padding-left: 18px;
+  color: #42566f;
+  display: grid;
+  gap: 6px;
+  font-size: 0.93rem;
+}
+
+.services-highlight {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 28px;
+  background: #0a1e3c;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 18px 36px rgba(7,33,68,0.35);
+}
+
+
+.services-highlight h3 {
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.services-highlight p {
+  margin: 0;
+  color: rgba(255,255,255,0.78);
+  max-width: 560px;
+}
+
+.services-highlight .btn-secondary {
+  background: var(--orange-600);
+  border-color: var(--orange-600);
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(255,122,0,0.35);
+}
+
+.services-highlight .btn-secondary:hover {
+  background: #ff8b2b;
+  border-color: #ff8b2b;
+  box-shadow: 0 16px 28px rgba(255,122,0,0.45);
+}
+
 /* Quote grid */
 .quote-grid { display: grid; grid-template-columns: 1fr 360px; gap: 20px; align-items: start }
 .quote-form { background: var(--card); padding: 18px; border-radius: 12px; box-shadow: var(--shadow) }
@@ -597,6 +778,10 @@ body {
   .services-grid {
     grid-template-columns: 1fr;
   }
+
+  .services-showcase {
+    grid-template-columns: 1fr;
+  }
   
   .quote-grid {
     grid-template-columns: 1fr;
@@ -622,6 +807,9 @@ body {
   .footer-inner { flex-direction: column; gap: 12px; padding: 22px 0 12px 0 }
   .footer-brand { flex-direction: column; gap: 6px; text-align: center }
   .main-form, .quote-form, .contact-form { flex-direction: column; align-items: stretch; max-width: 420px }
+  .services-header { align-items: flex-start }
+  .services-cta { max-width: 100% }
+  .service-media { height: 200px }
 }
 
 @media (max-width: 520px) {
