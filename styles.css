@@ -1,4 +1,31 @@
 /* HERO repuestos con video */
+@media (max-width: 700px) {
+  .repuestos-section {
+    padding: 0 0 24px 0;
+    min-height: unset;
+    max-height: unset;
+  }
+  .repuestos-content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .repuestos-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 12px;
+    width: 100%;
+  }
+  .repuesto-card {
+    padding: 8px 2px 8px 2px;
+    border-radius: 10px;
+    min-width: 0;
+    box-shadow: 0 2px 8px rgba(22,114,212,0.08);
+  }
+  .repuesto-img {
+    height: 90px;
+    border-radius: 8px 8px 0 0;
+  }
+}
 .repuestos-hero {
   position: relative;
   min-height: 380px;
