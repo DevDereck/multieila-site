@@ -335,5 +335,14 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    if (typeof iniciarCotizacion === 'function') {
+      iniciarCotizacion();
+    } else {
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof iniciarCotizacion === 'function') iniciarCotizacion();
+      });
+    }
+  </script>
 </body>
 </html>
