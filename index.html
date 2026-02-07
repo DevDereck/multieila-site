@@ -160,7 +160,6 @@
               <label class="contact-label" style="grid-column: span 2; font-weight:700; font-size:1.13rem; color:#1672d4;">Agrega servicios a cotizar:</label>
               <div id="serviciosList"></div>
               <button type="button" id="addServicio" class="btn-outline">+ Agregar servicio</button>
-              <!-- Separador visual -->
               <div style="grid-column: span 2; height:8px;"></div>
               <label class="contact-label" style="grid-column: span 2;">Nombre <input type="text" name="clientName" required minlength="2" placeholder="Escribe tu nombre completo" /></label>
               <label class="contact-label">Correo <input type="email" name="clientEmail" required placeholder="ejemplo@correo.com" /></label>
@@ -170,7 +169,7 @@
                 <button type="button" id="calculateQuote" class="btn-outline">Calcular total</button>
                 <button type="submit" id="sendQuote" class="btn-primary">Solicitar cotización</button>
               </div>
-              <div id="quoteTotal"></div>
+              <div id="quoteTotal" style="grid-column: span 2; text-align:center; font-size:1.18rem; color:#1672d4; font-weight:700; margin-top:10px;"></div>
             </div>
             <div id="quoteError" class="form-error" role="alert" aria-live="assertive" hidden></div>
             <div id="quoteSuccess" class="form-success" role="status" aria-live="polite" hidden></div>
