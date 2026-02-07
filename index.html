@@ -275,8 +275,7 @@
               <label class="contact-label">Teléfono <input type="tel" name="phone" required pattern="^[0-9()+-\s]{6,20}$" placeholder="Número de contacto" /></label>
               <label class="contact-label contact-label-message">Mensaje <textarea name="message" rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea></label>
               <div class="form-actions contact-form-actions" style="display:flex; gap:18px; justify-content:center;">
-                <button type="button" id="calculateQuote" class="btn-outline">Calcular total</button>
-                <button type="submit" id="sendQuote" class="btn-primary">Solicitar cotización</button>
+                <button class="btn-contact-send" id="contactSend" type="submit">Enviar</button>
               </div>
             </div>
             <div id="contactError" class="form-error" role="alert" aria-live="assertive" hidden></div>
