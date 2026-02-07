@@ -155,11 +155,15 @@
           <form id="quoteForm" class="main-form quote-form reveal delay-2" aria-label="Formulario de cotización" novalidate>
             <div class="contact-form-grid premium-quote-grid">
               <label class="contact-label" style="grid-column: span 2; font-weight:700; font-size:1.13rem; color:#1672d4;">Agrega repuestos a cotizar:</label>
-              <div id="repuestosList"></div>
-              <button type="button" id="addRepuesto" class="btn-outline">+ Agregar repuesto</button>
+              <div id="repuestosContainer">
+                <div id="repuestosList"></div>
+                <button type="button" id="addRepuesto" class="btn-outline">+ Agregar repuesto</button>
+              </div>
               <label class="contact-label" style="grid-column: span 2; font-weight:700; font-size:1.13rem; color:#1672d4;">Agrega servicios a cotizar:</label>
-              <div id="serviciosList"></div>
-              <button type="button" id="addServicio" class="btn-outline">+ Agregar servicio</button>
+              <div id="serviciosContainer">
+                <div id="serviciosList"></div>
+                <button type="button" id="addServicio" class="btn-outline">+ Agregar servicio</button>
+              </div>
               <div style="grid-column: span 2; height:8px;"></div>
               <label class="contact-label" style="grid-column: span 2;">Nombre <input type="text" name="clientName" required minlength="2" placeholder="Escribe tu nombre completo" /></label>
               <label class="contact-label">Correo <input type="email" name="clientEmail" required placeholder="ejemplo@correo.com" /></label>
