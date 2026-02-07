@@ -1062,7 +1062,7 @@ body {
 .footer-nav a:hover { color: var(--orange-600) }
 .footer-nav a:hover::after { width: 100% }
 .fancy-footer { background: rgba(10,30,60,0.90); color: #fff; padding: 0; border-top: 2px solid #ff7a00; box-shadow: 0 -2px 16px rgba(9,30,66,0.10) }
-.footer-brand { display: flex; align-items: center; gap: 16px; font-size: 1.1rem; font-weight: 600 }
+ .footer-brand { display: flex; align-items: center; gap: 8px; font-size: 1.1rem; font-weight: 600; flex-wrap: nowrap; }
 .footer-logo svg { display: block; width: 38px; height: 38px }
 .footer-title { font-size: 1.18rem; font-weight: 800; letter-spacing: -0.5px; color: #fff }
 .footer-copy { font-size: 1rem; color: #e6eef8; margin-left: 8px }
@@ -1264,7 +1264,7 @@ body {
   .contact-form-grid { grid-template-columns: 1fr; gap: 14px 0 }
   .contact-label-message, .contact-form-actions { grid-column: span 1 }
   .footer-inner { flex-direction: column; gap: 12px; padding: 22px 0 12px 0 }
-  .footer-brand { flex-direction: column; gap: 6px; text-align: center }
+  .footer-brand { flex-direction: row !important; gap: 8px !important; text-align: left !important; align-items: center !important; flex-wrap: nowrap !important; }
   .main-form, .quote-form, .contact-form { flex-direction: column; align-items: stretch; max-width: 420px }
   .services-header { align-items: flex-start }
   .services-cta { max-width: 100% }
