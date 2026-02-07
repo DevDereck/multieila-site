@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/styles.css" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <script src="/script.js" defer></script>
+  <!-- El script principal se carga al final del body para asegurar que el DOM esté listo -->
 </head>
 <body>
   <header class="site-header">
@@ -153,66 +153,28 @@
 
         <div class="quote-grid">
           <form id="quoteForm" class="main-form quote-form reveal delay-2" aria-label="Formulario de cotización" novalidate>
-            <fieldset>
-              <legend>Servicios (selecciona al menos uno)</legend>
-              <label class="checkbox">
-                <input type="checkbox" name="service" value="Montaje" data-price="1200" />
-                <span class="checkbox-label">
-                  Montaje industrial <small>desde $1,200</small>
-                </span>
-                <input type="number" class="qty" name="qty-Montaje" min="1" value="1" aria-label="Cantidad Montaje" />
-              </label>
-
-              <label class="checkbox">
-                <input type="checkbox" name="service" value="Mantenimiento" data-price="600" />
-                <span class="checkbox-label">
-                  Mantenimiento <small>desde $600</small>
-                </span>
-                <input type="number" class="qty" name="qty-Mantenimiento" min="1" value="1" aria-label="Cantidad Mantenimiento" />
-              </label>
-
-              <label class="checkbox">
-                <input type="checkbox" name="service" value="Diseño" data-price="2000" />
-                <span class="checkbox-label">
-                  Diseño y automatización <small>desde $2,000</small>
-                </span>
-                <input type="number" class="qty" name="qty-Diseño" min="1" value="1" aria-label="Cantidad Diseño" />
-              </label>
-
-              <label class="checkbox">
-                <input type="checkbox" name="service" value="Emergencia" data-price="800" />
-                <span class="checkbox-label">
-                  Atención 24/7 <small>desde $800</small>
-                </span>
-                <input type="number" class="qty" name="qty-Emergencia" min="1" value="1" aria-label="Cantidad Emergencia" />
-              </label>
-            </fieldset>
-
-            <fieldset>
-              <legend>Opciones</legend>
-              <label class="option">
-                <input type="checkbox" id="rush" data-price="300" /> Servicio urgente (+$300)
-              </label>
-              <label class="option">
-                <input type="checkbox" id="repuestos" data-price="150" /> Incluye repuestos (+$150*)
-              </label>
-            </fieldset>
-
-            <fieldset>
-              <legend>Tu información</legend>
-              <label>Nombre <input type="text" name="clientName" required minlength="2" /></label>
-              <label>Correo <input type="email" name="clientEmail" required /></label>
-              <label>Teléfono <input type="tel" name="clientPhone" pattern="^[0-9()+-\s]{6,20}$" /></label>
-              <label>Observaciones <textarea name="notes" rows="3"></textarea></label>
-            </fieldset>
-
-            <div class="form-actions">
-              <button type="button" id="calculate" class="btn-primary">Calcular Cotización</button>
-              <button type="submit" id="sendQuote" class="btn-outline">Enviar Solicitud</button>
+            <div class="contact-form-grid premium-quote-grid">
+              <label class="contact-label" style="grid-column: span 2; font-weight:700; font-size:1.13rem; color:#1672d4;">Agrega repuestos a cotizar:</label>
+              <div id="repuestosList" style="grid-column: span 2; display:flex; flex-direction:column; gap:10px;"></div>
+              <button type="button" id="addRepuesto" class="btn-outline" style="width:max-content; margin-bottom:10px;">+ Agregar repuesto</button>
+              <label class="contact-label" style="grid-column: span 2; font-weight:700; font-size:1.13rem; color:#1672d4;">Agrega servicios a cotizar:</label>
+              <div id="serviciosList" style="grid-column: span 2; display:flex; flex-direction:column; gap:10px;"></div>
+              <button type="button" id="addServicio" class="btn-outline" style="width:max-content; margin-bottom:10px; grid-column: span 2;">+ Agregar servicio</button>
+              <!-- Separador visual -->
+              <div style="grid-column: span 2; height:8px;"></div>
+              <label class="contact-label" style="grid-column: span 2;">Nombre <input type="text" name="clientName" required minlength="2" placeholder="Escribe tu nombre completo" /></label>
+              <label class="contact-label">Correo <input type="email" name="clientEmail" required placeholder="ejemplo@correo.com" /></label>
+              <label class="contact-label">Teléfono <input type="tel" name="clientPhone" pattern="^[0-9()+-\s]{6,20}$" placeholder="Número de contacto" /></label>
+              <label class="contact-label contact-label-message" style="grid-column: span 2;">Observaciones <textarea name="notes" rows="3" placeholder="¿Qué necesitas cotizar?"></textarea></label>
+              <div class="form-actions contact-form-actions" style="grid-column: span 2; justify-content:center;">
+                <button type="button" id="calculateQuote" class="btn-outline" style="min-width:140px; font-size:1.08rem; margin-right:18px;">Calcular total</button>
+                <button type="submit" id="sendQuote" class="btn-primary" style="min-width:180px; font-size:1.13rem;">Solicitar cotización</button>
+              </div>
+              <div id="quoteTotal" style="grid-column: span 2; text-align:center; font-size:1.18rem; color:#1672d4; font-weight:700; margin-top:10px;"></div>
             </div>
-
             <div id="quoteError" class="form-error" role="alert" aria-live="assertive" hidden></div>
             <div id="quoteSuccess" class="form-success" role="status" aria-live="polite" hidden></div>
+            </script>
           </form>
 
           <aside class="quote-summary reveal delay-3" aria-live="polite">
@@ -296,13 +258,13 @@
                   <span class="contact-icon orange">
                     <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path fill="#fff" d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C7.61 21 3 16.39 3 11a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.21 1.11l-2.2 2.2z"/></svg>
                   </span>
-                  <span class="contact-info-text">+1 234 567 890</span>
+                  <span class="contact-info-text">(506) 2265-7454</span>
                 </div>
                 <div class="contact-info-item address">
                   <span class="contact-icon blue">
                     <svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path fill="#fff" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"/></svg>
                   </span>
-                  <span class="contact-info-text">Calle Ejemplo 123, Ciudad</span>
+                  <span class="contact-info-text">San Joaquín de Flores, Heredia, Costa Rica</span>
                 </div>
               </div>
             </div>
@@ -317,7 +279,6 @@
                 <button class="btn-contact-send" type="submit">Enviar</button>
               </div>
             </div>
-            <!-- El botón ahora está dentro del grid -->
             <div id="contactError" class="form-error" role="alert" aria-live="assertive" hidden></div>
             <div id="contactSuccess" class="form-success" role="status" aria-live="polite" hidden></div>
           </form>
@@ -337,7 +298,7 @@
         <a href="/index.html" aria-label="Inicio">Inicio</a>
         <a href="/index.html#servicios">Servicios</a>
         <a href="/proyectos.html">Proyectos</a>
-          <a href="/repuestos.html">Repuestos</a>
+        <a href="/repuestos.html">Repuestos</a>
         <a href="/index.html#cotizar">Cotizar</a>
         <a href="/index.html#sobre-nosotros">Sobre nosotros</a>
         <a href="/index.html#contacto">Contacto</a>
@@ -370,6 +331,6 @@
     </div>
   </footer>
 
-  <script src="/script.js"></script>
+  <script src="/public/js/script.js"></script>
 </body>
 </html>

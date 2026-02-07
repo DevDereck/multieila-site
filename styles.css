@@ -1276,3 +1276,136 @@ body {
   .container { padding: 28px 0 }
   .hero-card .cover { height: 220px }
 }
+
+/* Cotización dinámica */
+.quote-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.premium-select.repuesto-item,
+.premium-select.servicio-item {
+  flex: 2;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #dbeafe;
+  font-size: 1.08rem;
+}
+.premium-cantidad.cantidad-item {
+  width: 90px;
+  padding: 12px 10px;
+  border-radius: 10px;
+  border: 1.5px solid #dbeafe;
+  font-size: 1.08rem;
+}
+.remove-item {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  color: #d32f2f;
+  font-weight: bold;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 38px;
+  transition: background 0.2s, color 0.2s;
+}
+.remove-item:hover {
+  background: #ffeaea;
+  color: #a00;
+}
+
+/* Responsive cotización mejorado */
+@media (max-width: 700px) {
+  #cotizar .main-form.quote-form {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 8px 0 12px 0;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 4px 18px rgba(22,114,212,0.10);
+    gap: 8px;
+    margin: 0;
+    align-items: stretch;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  #cotizar .contact-form-grid.premium-quote-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: stretch;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  #cotizar .form-actions.contact-form-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 0;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  #cotizar .btn-outline, #cotizar .btn-primary {
+    width: 100%;
+    min-width: 0;
+    margin: 0 0 8px 0 !important;
+    font-size: 1.08rem;
+    box-sizing: border-box;
+    margin: 0 auto 8px auto !important;
+  }
+  #cotizar .quote-row {
+    flex-direction: row;
+    gap: 6px;
+    width: 100%;
+    margin-bottom: 4px;
+    align-items: center;
+    margin: 0 0 4px 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  #cotizar .premium-select, #cotizar .premium-cantidad {
+    width: 100%;
+    min-width: 0;
+    font-size: 1.05rem;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  #cotizar .remove-item {
+    height: 38px;
+    min-width: 38px;
+    font-size: 1.2rem;
+    margin-left: 2px;
+  }
+  #cotizar .quote-summary {
+    margin-top: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 12px 0 0 0;
+    padding: 0;
+    border-radius: 0 0 16px 16px;
+    overflow-x: hidden;
+  }
+  #cotizar .breakdown {
+    padding-left: 0;
+    margin-bottom: 8px;
+    margin: 0 0 8px 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  #cotizar .container {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+}
