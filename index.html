@@ -156,21 +156,21 @@
             <div class="contact-form-grid premium-quote-grid">
               <label class="contact-label" style="grid-column: span 2; font-weight:700; font-size:1.13rem; color:#1672d4;">Agrega repuestos a cotizar:</label>
               <div id="repuestosList" style="grid-column: span 2; display:flex; flex-direction:column; gap:10px;"></div>
-              <button type="button" id="addRepuesto" class="btn-outline" style="width:max-content; margin-bottom:10px;">+ Agregar repuesto</button>
+              <button type="button" id="addRepuesto" class="btn-outline">+ Agregar repuesto</button>
               <label class="contact-label" style="grid-column: span 2; font-weight:700; font-size:1.13rem; color:#1672d4;">Agrega servicios a cotizar:</label>
               <div id="serviciosList" style="grid-column: span 2; display:flex; flex-direction:column; gap:10px;"></div>
-              <button type="button" id="addServicio" class="btn-outline" style="width:max-content; margin-bottom:10px; grid-column: span 2;">+ Agregar servicio</button>
+              <button type="button" id="addServicio" class="btn-outline">+ Agregar servicio</button>
               <!-- Separador visual -->
               <div style="grid-column: span 2; height:8px;"></div>
               <label class="contact-label" style="grid-column: span 2;">Nombre <input type="text" name="clientName" required minlength="2" placeholder="Escribe tu nombre completo" /></label>
               <label class="contact-label">Correo <input type="email" name="clientEmail" required placeholder="ejemplo@correo.com" /></label>
               <label class="contact-label">Teléfono <input type="tel" name="clientPhone" pattern="^[0-9()+-\s]{6,20}$" placeholder="Número de contacto" /></label>
               <label class="contact-label contact-label-message" style="grid-column: span 2;">Observaciones <textarea name="notes" rows="3" placeholder="¿Qué necesitas cotizar?"></textarea></label>
-              <div class="form-actions contact-form-actions" style="grid-column: span 2; justify-content:center;">
-                <button type="button" id="calculateQuote" class="btn-outline" style="min-width:140px; font-size:1.08rem; margin-right:18px;">Calcular total</button>
-                <button type="submit" id="sendQuote" class="btn-primary" style="min-width:180px; font-size:1.13rem;">Solicitar cotización</button>
+              <div class="form-actions contact-form-actions">
+                <button type="button" id="calculateQuote" class="btn-outline">Calcular total</button>
+                <button type="submit" id="sendQuote" class="btn-primary">Solicitar cotización</button>
               </div>
-              <div id="quoteTotal" style="grid-column: span 2; text-align:center; font-size:1.18rem; color:#1672d4; font-weight:700; margin-top:10px;"></div>
+              <div id="quoteTotal"></div>
             </div>
             <div id="quoteError" class="form-error" role="alert" aria-live="assertive" hidden></div>
             <div id="quoteSuccess" class="form-success" role="status" aria-live="polite" hidden></div>
