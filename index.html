@@ -155,10 +155,38 @@
           <form id="quoteForm" class="main-form quote-form reveal delay-2" aria-label="Formulario de cotización" novalidate>
             <div class="contact-form-grid premium-quote-grid">
               <label class="contact-label" style="grid-column: span 2; font-weight:700; font-size:1.13rem; color:#1672d4;">Agrega repuestos a cotizar:</label>
-              <div id="repuestosList"></div>
+              <div id="repuestosList">
+                <div class="quote-row"><select class='premium-select repuesto-item'><option value="" disabled selected>Elige un repuesto</option>
+  <option value="motor">Motor Eléctrico ($120)</option>
+  <option value="plc">PLC Programable ($200)</option>
+  <option value="valvula">Válvula solenoide ($80)</option>
+  <option value="interruptor">Interruptor de corriente ($60)</option>
+  <option value="faja">Faja de transmisión ($40)</option>
+  <option value="control">Control de temperatura ($90)</option>
+  <option value="push">Botón Push ($15)</option>
+  <option value="muletilla">Selector de muletilla ($18)</option>
+  <option value="termocupla">Termocupla ($25)</option>
+  <option value="contactor">Contactor ($55)</option>
+  <option value="proteccion">Protección térmica ($35)</option>
+  <option value="sensor">Sensor inductivo ($45)</option>
+  <option value="transformador">Transformador ($70)</option>
+  <option value="rele">Relé ($12)</option>
+  <option value="led">Luz led ($8)</option>
+  <option value="alarma">Alarma lumínica ($22)</option>
+  <option value="filtro">Filtro aire ($30)</option>
+  <option value="cobre">Figura de cobre ($10)</option>
+  <option value="bola">Válvula de bola ($28)</option>
+  <option value="regulador">Regulador de presión ($32)</option></select><input type='number' min='1' value='1' class='premium-cantidad cantidad-item' placeholder='Cantidad' /><button type='button' class='remove-item' title='Quitar'>✕</button></div>
+              </div>
               <button type="button" id="addRepuesto" class="btn-outline">+ Agregar repuesto</button>
               <label class="contact-label" style="grid-column: span 2; font-weight:700; font-size:1.13rem; color:#1672d4;">Agrega servicios a cotizar:</label>
-              <div id="serviciosList"></div>
+              <div id="serviciosList">
+                <div class="quote-row"><select class='premium-select servicio-item'><option value="" disabled selected>Elige un servicio</option>
+  <option value="montaje">Montaje industrial ($300)</option>
+  <option value="mantenimiento">Mantenimiento ($150)</option>
+  <option value="automatizacion">Automatización ($400)</option>
+  <option value="emergencia">Atención 24/7 ($250)</option></select><button type='button' class='remove-item' title='Quitar'>✕</button></div>
+              </div>
               <button type="button" id="addServicio" class="btn-outline">+ Agregar servicio</button>
               <div style="grid-column: span 2; height:8px;"></div>
               <label class="contact-label" style="grid-column: span 2;">Nombre <input type="text" name="clientName" required minlength="2" placeholder="Escribe tu nombre completo" /></label>
