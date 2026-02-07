@@ -155,10 +155,10 @@
           <form id="quoteForm" class="main-form quote-form reveal delay-2" aria-label="Formulario de cotización" novalidate>
             <div class="contact-form-grid premium-quote-grid">
               <label class="contact-label" style="grid-column: span 2; font-weight:700; font-size:1.13rem; color:#1672d4;">Agrega repuestos a cotizar:</label>
-              <div id="repuestosList" style="grid-column: span 2; display:flex; flex-direction:column; gap:10px;"></div>
+              <div id="repuestosList" class="quote-list"></div>
               <button type="button" id="addRepuesto" class="btn-outline">+ Agregar repuesto</button>
               <label class="contact-label" style="grid-column: span 2; font-weight:700; font-size:1.13rem; color:#1672d4;">Agrega servicios a cotizar:</label>
-              <div id="serviciosList" style="grid-column: span 2; display:flex; flex-direction:column; gap:10px;"></div>
+              <div id="serviciosList" class="quote-list"></div>
               <button type="button" id="addServicio" class="btn-outline">+ Agregar servicio</button>
               <!-- Separador visual -->
               <div style="grid-column: span 2; height:8px;"></div>
@@ -166,7 +166,7 @@
               <label class="contact-label">Correo <input type="email" name="clientEmail" required placeholder="ejemplo@correo.com" /></label>
               <label class="contact-label">Teléfono <input type="tel" name="clientPhone" pattern="^[0-9()+-\s]{6,20}$" placeholder="Número de contacto" /></label>
               <label class="contact-label contact-label-message" style="grid-column: span 2;">Observaciones <textarea name="notes" rows="3" placeholder="¿Qué necesitas cotizar?"></textarea></label>
-              <div class="form-actions contact-form-actions">
+              <div class="form-actions contact-form-actions" style="display:flex; gap:18px; justify-content:center;">
                 <button type="button" id="calculateQuote" class="btn-outline">Calcular total</button>
                 <button type="submit" id="sendQuote" class="btn-primary">Solicitar cotización</button>
               </div>
@@ -275,8 +275,9 @@
               <label class="contact-label">Correo <input type="email" name="email" required placeholder="ejemplo@correo.com" /></label>
               <label class="contact-label">Teléfono <input type="tel" name="phone" required pattern="^[0-9()+-\s]{6,20}$" placeholder="Número de contacto" /></label>
               <label class="contact-label contact-label-message">Mensaje <textarea name="message" rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea></label>
-              <div class="form-actions contact-form-actions">
-                <button class="btn-contact-send" type="submit">Enviar</button>
+              <div class="form-actions contact-form-actions" style="display:flex; gap:18px; justify-content:center;">
+                <button type="button" id="calculateQuote" class="btn-outline">Calcular total</button>
+                <button type="submit" id="sendQuote" class="btn-primary">Solicitar cotización</button>
               </div>
             </div>
             <div id="contactError" class="form-error" role="alert" aria-live="assertive" hidden></div>
